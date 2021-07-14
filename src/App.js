@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Loading from "./components/Loading";
-import "./assets/main.css";
 import ImageCard from "./components/ImageCard";
 import ImageSearch from "./components/ImageSearch";
+import ImageNotFound from "./components/ImageNotFound";
+
+import "./assets/main.css";
 
 function App() {
   const [images, setImages] = useState([]);
@@ -24,7 +26,7 @@ function App() {
   return (
     <div className="container mx-auto">
       <ImageSearch searchText={(text) => setTerm(text)} />
-      {!loading && images.length === 0 ? (<h1>Images not found</h1>): null}
+      {!loading && images.length === 0 ? (<ImageNotFound />): null}
       {loading ? (
         <Loading />
       ) : (
