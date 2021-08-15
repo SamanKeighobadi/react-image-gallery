@@ -8,8 +8,8 @@ const ImageCard = ({image}) => {
     const tags = image.tags.split(',');
 
   return (
-    <div >
-      <div className="max-w-sm overflow-hidden rounded shadow-lg ">
+    <div className="sm:mx-auto " >
+      <div className="max-w-sm sm:ml-4 overflow-hidden rounded shadow-lg sm:mb-4 ">
         <img
           src={image.webformatURL}
           alt="text"
