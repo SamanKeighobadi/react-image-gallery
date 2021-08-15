@@ -5,7 +5,6 @@ const ImageSearch = ({ searchText }) => {
   const [text, setText] = useState("");
   const onSubmit = (e) => {
     e.preventDefault();
-
     searchText(text);
   };
   return (
@@ -32,7 +31,7 @@ const ImageSearch = ({ searchText }) => {
 };
 
 
-// Prop Types
+//?  PropTypes
 ImageSearch.propTypes = {
   searchText: PropTypes.func  
 }

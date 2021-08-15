@@ -1,10 +1,11 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types' 
+//? Import Icons
 import {FaEye,FaDownload,FaHeart} from 'react-icons/fa'
 
 const ImageCard = ({image}) => {
 
-  
+    //? tags of images are entier string and use split methods 
     const tags = image.tags.split(',');
 
   return (
@@ -36,8 +37,8 @@ const ImageCard = ({image}) => {
         </div>
 
         <div className="px-6 py-4">
-          {tags.map(tag => (
-            <span key={tag.id} className="inline-block bg-blue-200 rounded-full px-3 py-1 my-1 text-sm font-semibold text-gray-700 mr-2">
+          {tags.map((tag,index) => (
+            <span key={index} className="inline-block bg-blue-200 rounded-full px-3 py-1 my-1 text-sm font-semibold text-gray-700 mr-2">
             #{tag}
           </span>
           ))}
