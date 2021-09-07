@@ -10,7 +10,7 @@ const useFetchImage = (url,term) => {
     //? fetch Data from API
   const fetchImages = async () => {
     const {data} = await axios.get(url).catch((err) => console.log(err));
-    // console.log(data.hits);
+    // console.log(data);
     //* set States
     setData(data.hits);
     setLoading(false);

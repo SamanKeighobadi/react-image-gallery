@@ -1,6 +1,5 @@
-import axios from "axios";
-//?Hooks
-import React, { useState, useEffect } from "react";
+
+import React, { useState } from "react";
 //? Import Components
 import Loading from "./components/Loading";
 import ImageCard from "./components/ImageCard";
